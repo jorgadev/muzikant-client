@@ -1,0 +1,350 @@
+@import url("./character.css");
+@import url("./button.css");
+@import url("./swiper.css");
+@import url("./input.css");
+
+* {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(37, 145, 251, 0.98) 0.1%,
+    rgba(0, 7, 128, 1) 99.8%
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  text-shadow: calc(var(--_i, -1) * -0.08em) 0.01em 2px #0004;
+}
+
+.main {
+  height: 100vh;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* AUTH */
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth .btn {
+  margin-top: 1em;
+  font-size: 2.5em;
+}
+
+.auth .error {
+  margin-top: 1em;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.auth .link {
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 0.25ch;
+  transition: transform 0.2s;
+}
+
+.auth .link:hover {
+  transform: scale(1.1);
+}
+
+/* HOME */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home section {
+  margin-bottom: 5rem;
+}
+
+.home .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .buttons .btn:first-child {
+  margin-right: 1rem;
+}
+.home .buttons .btn:last-child {
+  margin-right: 1rem;
+}
+
+/* SHOP */
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .mySwiper {
+  margin-bottom: 5rem;
+}
+
+.shop .character {
+  opacity: 0.5;
+}
+
+.shop .character:hover {
+  cursor: pointer;
+}
+
+.shop .active {
+  opacity: 1;
+}
+
+.shop .active:hover {
+  cursor: default;
+}
+
+/* GAME */
+.game.select {
+  display: flex;
+}
+
+.game.select .half {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game.select .half:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.game.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game.list .wrapper {
+  width: 100%;
+  height: 75vh;
+  overflow-y: scroll;
+}
+
+.game.list .wrapper::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.game.list .wrapper .item {
+  text-align: center;
+  color: white;
+  padding: 1rem 0;
+}
+
+.game.list .wrapper .item:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.game.list .swiper-select {
+  width: 300px;
+  height: 300px;
+}
+
+/* PLAY */
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play .end {
+  text-align: center;
+  color: white;
+}
+
+.play .end h1 {
+  font-size: 3rem;
+}
+
+.play .end .tracks {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #bbb7b7;
+}
+
+.play .end .tracks .correct {
+  color: greenyellow;
+}
+
+.play .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.play .wrapper audio {
+  display: none;
+}
+
+.play .wrapper input {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.play .wrapper .buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.play .wrapper .buttons .btn:nth-child(2) {
+  margin: 0 1rem;
+}
+
+.game-bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  background-color: #bbb7b7;
+  height: 10px;
+  width: 100%;
+}
+
+.game-bar .percentage.correct {
+  height: 10px;
+  background-color: greenyellow;
+}
+.game-bar .percentage.incorrect {
+  height: 10px;
+  background-color: red;
+}
+
+/* ADMIN */
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin .container {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.col {
+  flex: 1;
+}
+
+.col.right {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  .nav {
+    margin-top: 30px;
+  }
+
+  .character {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .btn {
+    font-size: 3rem;
+  }
+
+  .home section {
+    margin-bottom: 0;
+  }
+
+  .home .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home .buttons .btn {
+    width: fit-content;
+  }
+
+  .home .buttons .btn:first-child {
+    margin-right: 0;
+  }
+
+  .home .buttons .btn:last-child {
+    margin-top: 0.5rem;
+    margin-right: 0;
+  }
+
+  .game.select {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .play .wrapper input {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .play .wrapper .btn {
+    font-size: 2.5rem;
+  }
+
+  .game.list .wrapper .item .btn {
+    font-size: 2rem;
+  }
+}
