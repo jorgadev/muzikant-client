@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "https://muzikant-server-production.up.railway.app";
+export const BASE_URL = "https://muzikant-api.jorgadev.com";
 
 export const ENDPOINTS = {
   LOGIN: "/user/login",
